@@ -1,8 +1,10 @@
 package at.fhooe.sail.task02;
 
-public class Trainer {
+public class Trainer extends ActiveMember {
 
-	int activity;
+	public Trainer(String name, int activity) {
+		super(name, activity);
+	}
 
 	public double getIncome() {
 		return 10;

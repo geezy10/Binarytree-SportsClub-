@@ -1,7 +1,12 @@
 package at.fhooe.sail.task02;
 
-public class AmateurAthlete {
-	int activity;
+public class AmateurAthlete extends ActiveMember {
+
+
+	public AmateurAthlete(String name, int activity) {
+		super(name,activity);
+
+	}
 
 	public double getIncome() {
 		return 25;
@@ -10,8 +15,5 @@ public class AmateurAthlete {
 	public double getCosts() {
 		return activity * 2.5;
 	}
-	
-	public double getSurplus() {
-		return getIncome() - getCosts();
-	}
+
 }

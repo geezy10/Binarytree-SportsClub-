@@ -10,7 +10,9 @@ public abstract class AbstractMember implements Comparable<AbstractMember>{
 	
     public abstract double  getIncome(); //calculates the income of the member
     public abstract double getCosts(); // calculates the costs of the member
-    public abstract double getSurplus(); // calculates the surplus of the member
+    public double getSurplus(){
+		return getIncome()-getCosts();
+	}; // calculates the surplus of the member
 
     
     /* returns a string representation of the member with income, costs and surplus

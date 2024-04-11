@@ -2,7 +2,10 @@ package at.fhooe.sail.task02;
 
 public class TopAthlete extends ActiveMember {
 
-	int activity;
+	public TopAthlete(String name, int activity) {
+		super(name, activity);
+
+	}
 
 	public double getIncome() {
 		return 10;

@@ -2,9 +2,15 @@ package at.fhooe.sail.task02;
 
 public class Main {
 	public static void main(String[] args) {
+        Section Football = new Section("Football");
+        Football.addMember(new AmateurAthlete("Alice",2));
+
+
         // Create instances of concrete subclasses of AbstractMember
-        AbstractMember member1 = new ChairMember(500.0, "Alice");
-        AbstractMember member2 = new ChairMember(700.0, "Bob");
+        AbstractMember member1 = new Section("Alice");
+        AbstractMember member2 = new Section("Bob");
+
+        TopAthlete topAthlete = new TopAthlete("Charlie", 5);
 
 
       
