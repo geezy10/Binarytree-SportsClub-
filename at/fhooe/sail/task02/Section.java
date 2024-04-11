@@ -43,12 +43,19 @@ public class Section extends AbstractMember {
 
 	}
 	@Override
-	public double getSurplus() {
+	public String toString (boolean ascending){
 		Comparable<AbstractMember>[] abstractMembers = tree.toArray(true);
-		double sum=0;
+		StringBuilder builder = new StringBuilder();
+
+		builder.append(name).append(":   Einnahmen:    ").append(getIncome());
+		builder.append("     Kosten: ").append(getCosts()).append("€    ");
+		builder.append("     Überschuss: ").append(getSurplus());
+		builder.append("\n");
+		//counter einrücken
 		for (int i = 0; i<abstractMembers.length; i++) {
-			sum = sum + ((AbstractMember) abstractMembers[i]).getSurplus();
-		} return sum;
+			builder.append(((AbstractMember) abstractMembers[i]).toString(ascending)).append("\n");
+			//counter wieder zurück
+		} return builder.toString();
 	}
 	
 	}

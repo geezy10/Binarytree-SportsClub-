@@ -2,9 +2,9 @@ package at.fhooe.sail.task02;
 
 public class ChairMember extends AbstractMember {
 
-	double comp;
+	public double comp;
 
-	public ChairMember(double comp, String name) {
+	public ChairMember(String name, double comp) {
 		super(name);
 		this.comp = comp;
 	}
@@ -17,7 +17,5 @@ public class ChairMember extends AbstractMember {
 		return getIncome() * 0.2;
 	}
 
-	public double getSurplus() {
-		return getIncome() - getCosts();
-	}
+
 }
