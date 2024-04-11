@@ -44,8 +44,11 @@ public class Section extends AbstractMember {
 	}
 	@Override
 	public double getSurplus() {
-
-		return 0;
+		Comparable<AbstractMember>[] abstractMembers = tree.toArray(true);
+		double sum=0;
+		for (int i = 0; i<abstractMembers.length; i++) {
+			sum = sum + ((AbstractMember) abstractMembers[i]).getSurplus();
+		} return sum;
 	}
 	
 	}
