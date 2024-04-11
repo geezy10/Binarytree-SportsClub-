@@ -36,12 +36,15 @@ public class Section extends AbstractMember {
 	@Override
 	public double getCosts() {
 		Comparable<AbstractMember>[] abstractMembers = tree.toArray(true);
+		double sum=0;
+		for (int i = 0; i<abstractMembers.length; i++) {
+			sum = sum + ((AbstractMember) abstractMembers[i]).getCosts();
+		} return sum;
 
-		return 0;
 	}
 	@Override
 	public double getSurplus() {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 	
