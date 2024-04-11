@@ -5,7 +5,7 @@ public class Main {
         Section Football = new Section("Football");
         Football.addMember(new AmateurAthlete("Alice",2));
 
-
+        
         // Create instances of concrete subclasses of AbstractMember
         AbstractMember member1 = new Section("Alice");
         AbstractMember member2 = new Section("Bob");
@@ -14,7 +14,7 @@ public class Main {
 
 
       
-        
+   
     
      // Print information about the members
         System.out.println("Information about members:");
