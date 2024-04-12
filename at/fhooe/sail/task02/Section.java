@@ -42,20 +42,32 @@ public class Section extends AbstractMember {
 		} return sum;
 
 	}
+	private static int indentLevel = 0;
+
 	@Override
 	public String toString (boolean ascending){
-		Comparable<AbstractMember>[] abstractMembers = tree.toArray(true);
+		Comparable<AbstractMember>[] abstractMembers = tree.toArray(ascending);
+
 		StringBuilder builder = new StringBuilder();
 
-		builder.append(name).append(":   Einnahmen:    ").append(getIncome());
+		StringBuilder indentBuilder = new StringBuilder();
+		for (int i = 0; i < indentLevel; i++) {
+			indentBuilder.append("\t");
+		}
+
+		String indent = indentBuilder.toString();
+
+		builder.append(indent).append(name).append(":   Einnahmen:    ").append(getIncome());
 		builder.append("     Kosten: ").append(getCosts()).append("€    ");
 		builder.append("     Überschuss: ").append(getSurplus());
 		builder.append("\n");
-		//counter einrücken
+
+		indentLevel++;
 		for (int i = 0; i<abstractMembers.length; i++) {
 			builder.append(((AbstractMember) abstractMembers[i]).toString(ascending)).append("\n");
-			//counter wieder zurück
-		} return builder.toString();
+
+		} indentLevel--;
+		return builder.toString();
 	}
 	
 	}
