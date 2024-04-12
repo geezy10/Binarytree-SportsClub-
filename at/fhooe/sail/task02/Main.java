@@ -14,10 +14,12 @@ public class Main {
         Tennis.addMember(new TopAthlete("Hans", 5));
 
         Section Sportverein = new Section("Sportverein");
+
         Sportverein.addMember(Football);
         Sportverein.addMember(Tennis);
-        Sportverein.addMember(new ChairMember("Irene", 0.5));
+        Sportverein.addMember(new HonoraryMember("Irene"));
         Sportverein.addMember(new HonoraryMember("Johann"));
+
 
 
         System.out.println(Sportverein.toString(true));

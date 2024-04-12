@@ -58,23 +58,23 @@ public class Section extends AbstractMember {
 
         StringBuilder builder = new StringBuilder();
 
-        StringBuilder indentBuilder = new StringBuilder();
-        for (int i = 0; i < indentLevel; i++) {
-            indentBuilder.append("\t");
-        }
 
-        String indent = indentBuilder.toString();
-
-        builder.append(indent).append(name).append(":   Einnahmen:    ").append(getIncome());
+        builder.append(name).append(":   Einnahmen:    ").append(getIncome());
         builder.append("     Kosten: ").append(getCosts()).append("€    ");
         builder.append("     Überschuss: ").append(getSurplus());
         builder.append("\n");
 
-        indentLevel++;
+
         for (int i = 0; i < abstractMembers.length; i++) {
-            builder.append(indent).append("\t").append(((AbstractMember) abstractMembers[i]).toString(ascending)).append("\n");
+            StringBuilder indentBuilder = new StringBuilder();
+            for (int j = 0; j < indentLevel; j++) {
+                indentBuilder.append("\t");
+            }
+            indentLevel++;
+            builder.append(indentBuilder).append("\t").append(((AbstractMember) abstractMembers[i])
+                    .toString(ascending)).append("\n");
+            indentLevel--;
         }
-        indentLevel--;
         return builder.toString();
     }
 
