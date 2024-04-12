@@ -26,6 +26,8 @@ public class Main {
 
 
         System.out.println(Sportverein.toString(true));
+        System.out.println(Sportverein.toString(false));
+        System.out.println(Sportverein.toString());
 
 
 
