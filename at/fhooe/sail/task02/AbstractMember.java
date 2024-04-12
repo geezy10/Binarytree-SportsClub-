@@ -30,7 +30,7 @@ public abstract class AbstractMember implements Comparable<AbstractMember>{
 	}
 
     public int compareTo(AbstractMember other) {
-        // Compare based on some criteria, for example, names
+        // Compare based on names
         return this.name.compareTo(other.name);
     }
 }

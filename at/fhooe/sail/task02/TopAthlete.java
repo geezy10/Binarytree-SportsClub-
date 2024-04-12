@@ -8,14 +8,10 @@ public class TopAthlete extends ActiveMember {
 	}
 
 	public double getIncome() {
-		return 10;
+		return 10*12;
 	}
 
 	public double getCosts() {
-		return activity * 5;
-	}
-
-	public double getSurplus() {
-		return getIncome() - getCosts();
+		return activity * 5*12;
 	}
 }

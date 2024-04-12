@@ -7,10 +7,10 @@ public class Trainer extends ActiveMember {
 	}
 
 	public double getIncome() {
-		return 10;
+		return 10*12;
 	}
 
 	public double getCosts() {
-		return activity * 40;
+		return activity * 40*12;
 	}
 }

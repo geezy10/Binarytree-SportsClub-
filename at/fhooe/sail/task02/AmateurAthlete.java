@@ -9,11 +9,11 @@ public class AmateurAthlete extends ActiveMember {
 	}
 
 	public double getIncome() {
-		return 25;
+		return 25*12;
 	}
 
 	public double getCosts() {
-		return activity * 2.5;
+		return activity * 2.5*12;
 	}
 
 }
