@@ -7,7 +7,6 @@ public class Main {
         Football.addMember(new Trainer("Bob", 5));
         Football.addMember(new TopAthlete("Charlie", 3));
 
-
         Section Tennis = new Section("Tennis");
         Tennis.addMember(new AmateurAthlete("Felix", 4));
         Tennis.addMember(new Trainer("Greta", 2));
@@ -21,6 +20,9 @@ public class Main {
         Sportverein.addMember(new HonoraryMember("Johann"));
 
 
+
+        Tennis.removeMember("Felix");
+        Tennis.isMember("Felix");
 
         System.out.println(Sportverein.toString(true));
 
@@ -46,14 +48,7 @@ public class Main {
 
 
 
-//        Section Tennis = new Section("Tennis");
-//        AbstractMember member1 = new TopAthlete("Axel", 5);
-//        Tennis.addMember(member1);
-//        //Football.addMember(Tennis);
-//        Section Swimming = new Section("Swimming");
-//        System.out.println(Football.toString(true));
-//        System.out.println(Tennis.toString(false));
+/
 
     }
 }
-

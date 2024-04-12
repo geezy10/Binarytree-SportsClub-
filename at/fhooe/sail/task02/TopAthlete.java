@@ -7,6 +7,7 @@ public class TopAthlete extends ActiveMember {
 
 	}
 
+
 	public double getIncome() {
 		return 10*12;
 	}

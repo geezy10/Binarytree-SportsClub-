@@ -115,7 +115,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if (remove.left == null && remove.right == null) {
             if (parent == null) { // remove is the root
                 root = null;
-            } else if (remove.data.compareTo(parent.left.data) == 0) {
+            } else if (remove.data.compareTo(parent.data) < 0) {
                 parent.left = null;
             } else {
                 parent.right = null;
@@ -125,7 +125,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else if (remove.left == null) {
             if (parent == null) {
                 root = remove.right;
-            } else if (remove.data.compareTo(parent.left.data) == 0) {
+            } else if (remove.data.compareTo(parent.data) < 0) {
                 parent.left = remove.right;
             } else {
                 parent.right = remove.right;
@@ -133,7 +133,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         } else if (remove.right == null) {
             if (parent == null) {
                 root = remove.left;
-            } else if (remove.data.compareTo(parent.left.data) == 0) {
+            } else if (remove.data.compareTo(parent.data) < 0) {
                 parent.left = remove.left;
             } else {
                 parent.right = remove.left;
@@ -151,7 +151,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
             if (parent == null) {
                 root = successor;
-            } else if (remove.data.compareTo(parent.left.data) == 0) {
+            } else if (remove.data.compareTo(parent.data) < 0) {
                 parent.left = successor;
             } else {
                 parent.right = successor;
