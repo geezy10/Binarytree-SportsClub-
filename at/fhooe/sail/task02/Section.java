@@ -54,24 +54,26 @@ public class Section extends AbstractMember {
 
     @Override
     public String toString(boolean ascending) {
-        Comparable<AbstractMember>[] abstractMembers = tree.toArray(ascending);
+        //convert the tree to an array
+        Comparable<AbstractMember>[] Members = tree.toArray(ascending);
 
         StringBuilder builder = new StringBuilder();
 
-
+        //infos about the section
         builder.append(name).append(":   Einnahmen:    ").append(getIncome());
         builder.append("     Kosten: ").append(getCosts()).append("€    ");
         builder.append("     Überschuss: ").append(getSurplus());
         builder.append("\n");
 
-
-        for (int i = 0; i < abstractMembers.length; i++) {
+        //iterate over all members
+        for (int i = 0; i < Members.length; i++) {
             StringBuilder indentBuilder = new StringBuilder();
             for (int j = 0; j < indentLevel; j++) {
                 indentBuilder.append("\t");
             }
             indentLevel++;
-            builder.append(indentBuilder).append("\t").append(((AbstractMember) abstractMembers[i])
+            //if the member is a subsection, call the toString method recursiv with the subsection
+            builder.append(indentBuilder).append("\t").append(((AbstractMember) Members[i])
                     .toString(ascending)).append("\n");
             indentLevel--;
         }
