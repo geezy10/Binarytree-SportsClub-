@@ -50,6 +50,10 @@ public class Section extends AbstractMember {
 
     }
 
+    @Override
+    public String toString() {
+        return this.toString(true);
+    }
     private static int indentLevel = 0;
 
     @Override
