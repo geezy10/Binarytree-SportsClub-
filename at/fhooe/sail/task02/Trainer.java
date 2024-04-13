@@ -11,6 +11,6 @@ public class Trainer extends ActiveMember {
 	}
 
 	public double getCosts() {
-		return activity * 40*12;
+		return activity*40*12;
 	}
 }

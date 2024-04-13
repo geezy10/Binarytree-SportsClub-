@@ -10,7 +10,7 @@ public class Section extends AbstractMember {
 
     BinarySearchTree<AbstractMember> tree = new BinarySearchTree<>();
 
-    boolean addMember(AbstractMember m) {
+    public boolean addMember(AbstractMember m) {
         if (tree.find(m))
             return false;
         tree.insert(m);
@@ -18,13 +18,13 @@ public class Section extends AbstractMember {
 
     }
 
-    boolean removeMember(AbstractMember m) {
+   public  boolean removeMember(AbstractMember m) {
         return tree.remove(m);
 
 
     }
 
-    boolean isMember(AbstractMember m) {
+    public boolean isMember(AbstractMember m) {
         return tree.find(m);
 
     }
