@@ -4,7 +4,6 @@ import java.lang.Comparable;
 import java.lang.String;
 import java.lang.StringBuilder;
 
-import javax.xml.crypto.Data;
 
 public class BinarySearchTree<T extends Comparable<T>> {
     protected class BinaryTreeNode {

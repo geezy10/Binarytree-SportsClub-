@@ -18,7 +18,7 @@ public class Section extends AbstractMember {
 
     }
 
-   public  boolean removeMember(AbstractMember m) {
+    public boolean removeMember(AbstractMember m) {
         return tree.remove(m);
 
 
@@ -54,6 +54,7 @@ public class Section extends AbstractMember {
     public String toString() {
         return this.toString(true);
     }
+
     private static int indentLevel = 0;
 
     @Override
