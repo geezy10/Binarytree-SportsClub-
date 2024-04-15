@@ -6,9 +6,9 @@ public abstract class ActiveMember extends AbstractMember {
         super(name);
         this.activity=activity;
     }
-    public abstract double getIncome(); //calculates the income of the member
+    public abstract double getIncome(); 
 
-    public abstract double getCosts(); // calculates the costs of the member
+    public abstract double getCosts(); 
 
     public int activity;
 
